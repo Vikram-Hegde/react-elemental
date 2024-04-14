@@ -16,6 +16,7 @@ interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 		bottom?: string
 		left?: string
 	}
+	className?: string
 }
 
 const Badge = ({
@@ -24,12 +25,14 @@ const Badge = ({
 	maxCount = 10,
 	anchor = 'top-right',
 	anchorOffset,
+	className,
 	children,
 }: BadgeProps) => {
 	const badgeClasses = clsx(
 		styles.badge,
 		styles[`badge--${variant}`],
-		styles[`badge--${anchor}`]
+		styles[`badge--${anchor}`],
+		className
 	)
 
 	return (

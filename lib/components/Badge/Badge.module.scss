@@ -11,7 +11,7 @@
 	display: inline-block;
 	padding: spacing('100') spacing('100');
 	font-size: 13px;
-	block-size: spacing('200');
+	min-block-size: spacing('200');
 	min-inline-size: spacing('200');
 	font-weight: 600;
 	line-height: 1cap;
