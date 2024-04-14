@@ -1,0 +1,49 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/spacing' as *;
+
+.input {
+	width: min(100%, 340px);
+	border-radius: 6px;
+
+	&:focus-within {
+		background-color: color('light', '300');
+	}
+
+	label {
+		display: inline-block;
+		margin-bottom: spacing('200');
+	}
+
+	&__wrapper {
+		background-color: color('light', '200');
+		display: flex;
+		color: color('light', '900');
+		align-items: center;
+
+		svg {
+			flex-shrink: 0;
+		}
+
+		&:has(svg) {
+			padding-inline: spacing('300');
+		}
+	}
+
+	input {
+		padding: spacing('300');
+		font: inherit;
+		font-weight: 600;
+		line-height: 1cap;
+		color: color('primary', '900');
+		flex: 1 1 auto;
+		width: 100%;
+		border: none;
+		background-color: transparent;
+		outline: none;
+
+		&:placeholder {
+			font: inherit;
+			color: color('light', '900');
+		}
+	}
+}

@@ -1,4 +1,4 @@
-import '../../assets/index2.css';
+import '../../assets/index3.css';
 import { jsxs as o, jsx as s } from "react/jsx-runtime";
 import p from "clsx";
 const c = "_wrapper_14kuw_1", n = "_badge_14kuw_6", l = "_count_14kuw_51", e = {
