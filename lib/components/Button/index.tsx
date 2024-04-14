@@ -32,7 +32,8 @@ const Button = ({
 				styles[`btn--${size}`],
 				styles[`btn--${fullWidth ? 'full' : ''}`],
 				styles[`btn--border-${borderAccent}`],
-				disabled && styles[`btn--disabled`],
+				variant === 'secondary' && disabled && styles[`btn--disabled`],
+				uppercase && styles[`btn--uppercase`],
 				className
 			)}
 			{...props}

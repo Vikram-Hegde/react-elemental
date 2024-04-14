@@ -69,4 +69,8 @@
 		opacity: 0.5;
 		pointer-events: none;
 	}
+
+	&--uppercase {
+		text-transform: uppercase;
+	}
 }
