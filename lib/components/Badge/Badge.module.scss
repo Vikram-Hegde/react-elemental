@@ -60,7 +60,7 @@
 }
 
 .badge:has(.count:empty) {
-	block-size: 0.25rem;
-	min-inline-size: 0.25rem;
-	padding: 0.25rem;
+	block-size: spacing('100');
+	min-inline-size: spacing('100');
+	padding: spacing('100');
 }
