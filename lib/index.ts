@@ -1,4 +1,4 @@
 import Button from './components/Button'
-import clsx from 'clsx'
+import Badge from './components/Badge'
 
-export { Button, clsx }
+export { Button, Badge }

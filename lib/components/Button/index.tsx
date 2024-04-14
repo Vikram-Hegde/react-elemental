@@ -24,23 +24,22 @@ const Button = ({
 	className,
 	...props
 }: ButtonProps) => {
+	const buttonClasses = clsx(
+		styles.btn,
+		styles[`btn--${variant}`],
+		styles[`btn--${size}`],
+		styles[`btn--${fullWidth ? 'full' : ''}`],
+		styles[`btn--border-${borderAccent}`],
+		{ [styles[`btn--disabled`]]: variant === 'secondary' && disabled },
+		{ [styles[`btn--uppercase`]]: uppercase },
+		className
+	)
+
 	return (
-		<button
-			className={clsx(
-				styles.btn,
-				styles[`btn--${variant}`],
-				styles[`btn--${size}`],
-				styles[`btn--${fullWidth ? 'full' : ''}`],
-				styles[`btn--border-${borderAccent}`],
-				variant === 'secondary' && disabled && styles[`btn--disabled`],
-				uppercase && styles[`btn--uppercase`],
-				className
-			)}
-			{...props}
-		>
-			{props.startIcon && <span>{props.startIcon}</span>}
+		<button className={buttonClasses} {...props}>
+			{props?.startIcon}
 			{children}
-			{props.endIcon && <span>{props.endIcon}</span>}
+			{props?.endIcon}
 		</button>
 	)
 }

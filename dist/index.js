@@ -1,6 +1,6 @@
-import { default as a } from "./components/Button/index.js";
-import { default as f } from "clsx";
+import { default as e } from "./components/Button/index.js";
+import { default as f } from "./components/Badge/index.js";
 export {
-  a as Button,
-  f as clsx
+  f as Badge,
+  e as Button
 };

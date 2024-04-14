@@ -1,8 +1,8 @@
 import '../../assets/index.css';
-import { jsxs as c, jsx as r } from "react/jsx-runtime";
+import { jsxs as c } from "react/jsx-runtime";
 import m from "clsx";
-const i = "_btn_63soj_1", n = {
-  btn: i,
+const y = "_btn_63soj_1", n = {
+  btn: y,
   "btn--primary": "_btn--primary_63soj_15",
   "btn--secondary": "_btn--secondary_63soj_22",
   "btn--tertiary": "_btn--tertiary_63soj_27",
@@ -15,36 +15,32 @@ const i = "_btn_63soj_1", n = {
   "btn--disabled": "_btn--disabled_63soj_53",
   "btn--uppercase": "_btn--uppercase_63soj_57"
 }, u = ({
-  children: s,
+  children: _,
   variant: b = "primary",
-  size: _ = "md",
+  size: s = "md",
   fullWidth: e = !1,
-  borderAccent: o = "primary",
+  borderAccent: r = "primary",
   disabled: a = !1,
-  uppercase: d = !1,
-  className: l,
+  uppercase: o = !1,
+  className: d,
   ...t
-}) => /* @__PURE__ */ c(
-  "button",
-  {
-    className: m(
-      n.btn,
-      n[`btn--${b}`],
-      n[`btn--${_}`],
-      n[`btn--${e ? "full" : ""}`],
-      n[`btn--border-${o}`],
-      b === "secondary" && a && n["btn--disabled"],
-      d && n["btn--uppercase"],
-      l
-    ),
-    ...t,
-    children: [
-      t.startIcon && /* @__PURE__ */ r("span", { children: t.startIcon }),
-      s,
-      t.endIcon && /* @__PURE__ */ r("span", { children: t.endIcon })
-    ]
-  }
-);
+}) => {
+  const l = m(
+    n.btn,
+    n[`btn--${b}`],
+    n[`btn--${s}`],
+    n[`btn--${e ? "full" : ""}`],
+    n[`btn--border-${r}`],
+    { [n["btn--disabled"]]: b === "secondary" && a },
+    { [n["btn--uppercase"]]: o },
+    d
+  );
+  return /* @__PURE__ */ c("button", { className: l, ...t, children: [
+    t == null ? void 0 : t.startIcon,
+    _,
+    t == null ? void 0 : t.endIcon
+  ] });
+};
 export {
   u as default
 };

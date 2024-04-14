@@ -1,0 +1,66 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/spacing' as *;
+
+.wrapper {
+	position: relative;
+	display: inline-block;
+}
+
+.badge {
+	position: absolute;
+	display: inline-block;
+	padding: spacing('100') spacing('100');
+	font-size: 13px;
+	block-size: spacing('200');
+	min-inline-size: spacing('200');
+	font-weight: 600;
+	line-height: 1cap;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	border-radius: 500px;
+	color: color('primary', '50');
+
+	&--primary {
+		background-color: color('orange', '500');
+	}
+
+	&--secondary {
+		background-color: color('light', '500');
+		color: color('primary', '900');
+	}
+
+	&--success {
+		background-color: color('green', '500');
+	}
+
+	&--danger {
+		background-color: color('red', '500');
+	}
+
+	&--top-left {
+		top: 0;
+		left: 0;
+	}
+
+	&--top-right {
+		top: 0;
+		right: 0;
+	}
+
+	&--bottom-left {
+		bottom: 0;
+		left: 0;
+	}
+
+	&--bottom-right {
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.badge:has(.count:empty) {
+	block-size: 0.25rem;
+	min-inline-size: 0.25rem;
+	padding: 0.25rem;
+}

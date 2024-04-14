@@ -1,4 +1,4 @@
-import { default as clsx } from 'clsx';
+import { default as Badge } from './components/Badge';
 import { default as Button } from './components/Button';
 
-export { Button, clsx };
+export { Button, Badge };
