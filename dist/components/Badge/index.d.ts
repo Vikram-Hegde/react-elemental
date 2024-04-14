@@ -13,6 +13,7 @@ interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
         bottom?: string;
         left?: string;
     };
+    className?: string;
 }
-declare const Badge: ({ variant, count, maxCount, anchor, anchorOffset, children, }: BadgeProps) => import("react/jsx-runtime").JSX.Element;
+declare const Badge: ({ variant, count, maxCount, anchor, anchorOffset, className, children, }: BadgeProps) => import("react/jsx-runtime").JSX.Element;
 export default Badge;
