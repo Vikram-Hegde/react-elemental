@@ -1,0 +1,15 @@
+@use 'sass:map';
+$space-increment: 0.25;
+$spacing: ();
+
+@for $i from 1 through 9 {
+	$spacing: map.set($spacing, '#{$i * 100}', #{$i * $space-increment}rem);
+}
+
+@function spacing($key: null) {
+	@if $key == null {
+		@error 'Pass a valid spacing key.';
+	}
+
+	@return map.get($spacing, $key);
+}

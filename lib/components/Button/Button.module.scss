@@ -1,0 +1,72 @@
+@use '../../tokens/spacing' as *;
+@use '../../tokens/colors' as *;
+
+.btn {
+	all: unset;
+	cursor: pointer;
+	display: flex;
+	gap: spacing('200');
+	align-items: center;
+	line-height: 1cap;
+	border-radius: 6px;
+	font-family: sans-serif;
+	font-weight: 500;
+
+	&:active {
+		scale: 0.96;
+	}
+
+	&--primary {
+		background-color: color('primary', '300');
+		color: color('primary', '50');
+
+		&:hover {
+			background-color: color('primary', '400');
+		}
+	}
+
+	&--secondary {
+		background-color: transparent;
+		border: 2px solid color('primary', '300');
+		color: color('primary', '300');
+	}
+
+	&--tertiary {
+		background-color: transparent;
+		color: color('primary', '300');
+
+		&:hover {
+			background-color: color('primary', '50');
+		}
+	}
+
+	&--sm {
+		padding: spacing('200') spacing('200');
+	}
+
+	&--md {
+		padding: spacing('300') spacing('400');
+	}
+
+	&--lg {
+		padding: spacing('400') spacing('600');
+	}
+
+	&--full {
+		width: 100%;
+	}
+
+	&--border-primary {
+		border-color: color('primary', '300');
+	}
+
+	&--border-secondary {
+		color: color('primary', '900');
+		border-color: color('light', '500');
+	}
+
+	&--disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
