@@ -3,7 +3,6 @@ import { Badge } from '../../lib'
 import BellIcon from '~icons/solar/bell-linear'
 
 const meta: Meta = {
-	title: 'Badge',
 	component: Badge,
 	tags: ['autodocs'],
 	argTypes: {

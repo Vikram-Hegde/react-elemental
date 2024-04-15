@@ -1,9 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { Input } from '../../lib'
+import { Input } from '../../../lib'
 import SearchIcon from '~icons/solar/magnifer-linear'
 
 const meta: Meta = {
-	title: 'Input',
 	component: Input,
 	tags: ['autodocs'],
 }

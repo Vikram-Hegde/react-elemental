@@ -4,7 +4,6 @@ import type { Meta, StoryFn } from '@storybook/react'
 import AddIcon from '~icons/solar/add-circle-linear'
 
 const meta: Meta<typeof Button> = {
-	title: 'Button',
 	component: Button,
 	tags: ['autodocs'],
 }
