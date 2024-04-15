@@ -16,6 +16,11 @@
 		scale: 0.96;
 	}
 
+	&:focus-visible {
+		outline: 2px solid color('primary', '300');
+		outline-offset: 2px;
+	}
+
 	&--primary {
 		background-color: color('primary', '300');
 		color: color('primary', '50');
@@ -33,10 +38,10 @@
 
 	&--tertiary {
 		background-color: transparent;
-		color: color('primary', '300');
+		color: currentColor;
 
 		&:hover {
-			background-color: color('primary', '50');
+			background-color: color-mix(in srgb, currentColor, transparent 90%);
 		}
 	}
 

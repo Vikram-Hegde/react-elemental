@@ -1,46 +1,46 @@
 import '../../assets/index2.css';
 import { jsxs as c } from "react/jsx-runtime";
 import m from "clsx";
-const o = "_btn_vy9nn_1", t = {
+const o = "_btn_1y3el_1", n = {
   btn: o,
-  "btn--primary": "_btn--primary_vy9nn_15",
-  "btn--secondary": "_btn--secondary_vy9nn_22",
-  "btn--tertiary": "_btn--tertiary_vy9nn_27",
-  "btn--sm": "_btn--sm_vy9nn_34",
-  "btn--md": "_btn--md_vy9nn_37",
-  "btn--lg": "_btn--lg_vy9nn_40",
-  "btn--full": "_btn--full_vy9nn_43",
-  "btn--border-primary": "_btn--border-primary_vy9nn_46",
-  "btn--border-secondary": "_btn--border-secondary_vy9nn_49",
-  "btn--disabled": "_btn--disabled_vy9nn_53",
-  "btn--uppercase": "_btn--uppercase_vy9nn_57"
-}, v = ({
-  children: _,
-  variant: b = "primary",
-  size: e = "md",
-  fullWidth: r = !1,
-  borderAccent: a = "primary",
-  disabled: y = !1,
-  uppercase: d = !1,
-  className: s,
-  ...n
+  "btn--primary": "_btn--primary_1y3el_19",
+  "btn--secondary": "_btn--secondary_1y3el_26",
+  "btn--tertiary": "_btn--tertiary_1y3el_31",
+  "btn--sm": "_btn--sm_1y3el_38",
+  "btn--md": "_btn--md_1y3el_41",
+  "btn--lg": "_btn--lg_1y3el_44",
+  "btn--full": "_btn--full_1y3el_47",
+  "btn--border-primary": "_btn--border-primary_1y3el_50",
+  "btn--border-secondary": "_btn--border-secondary_1y3el_53",
+  "btn--disabled": "_btn--disabled_1y3el_57",
+  "btn--uppercase": "_btn--uppercase_1y3el_61"
+}, f = ({
+  children: b,
+  variant: e = "primary",
+  size: _ = "md",
+  fullWidth: l = !1,
+  borderAccent: r = "primary",
+  disabled: a = !1,
+  uppercase: y = !1,
+  className: d,
+  ...t
 }) => {
-  const l = m(
-    t.btn,
-    t[`btn--${b}`],
-    t[`btn--${e}`],
-    t[`btn--${r ? "full" : ""}`],
-    t[`btn--border-${a}`],
-    { [t["btn--disabled"]]: b === "secondary" && y },
-    { [t["btn--uppercase"]]: d },
-    s
+  const s = m(
+    n.btn,
+    n[`btn--${e}`],
+    n[`btn--${_}`],
+    n[`btn--${l ? "full" : ""}`],
+    n[`btn--border-${r}`],
+    { [n["btn--disabled"]]: e === "secondary" && a },
+    { [n["btn--uppercase"]]: y },
+    d
   );
-  return /* @__PURE__ */ c("button", { className: l, ...n, children: [
-    n == null ? void 0 : n.startIcon,
-    _,
-    n == null ? void 0 : n.endIcon
+  return /* @__PURE__ */ c("button", { className: s, ...t, children: [
+    t == null ? void 0 : t.startIcon,
+    b,
+    t == null ? void 0 : t.endIcon
   ] });
 };
 export {
-  v as default
+  f as default
 };
