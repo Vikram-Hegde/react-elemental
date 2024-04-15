@@ -1,0 +1,40 @@
+@use '../../tokens/colors' as *;
+@use '../../tokens/spacing' as *;
+
+.chip {
+	display: inline-flex;
+	align-items: center;
+	line-height: 1cap;
+	padding: 6px spacing('100');
+	border-radius: 4px;
+	border: 1px solid;
+	gap: spacing('100');
+
+	&--uppercase {
+		text-transform: uppercase;
+	}
+
+	&--green {
+		background-color: color('green', '200');
+		color: color('green', '900');
+		border-color: color('green', '500');
+	}
+
+	&--red {
+		background-color: color('red', '200');
+		color: color('red', '900');
+		border-color: color('red', '500');
+	}
+
+	&--orange {
+		background-color: color('orange', '200');
+		color: color('orange', '900');
+		border-color: color('orange', '500');
+	}
+
+	&--blue {
+		background-color: hsl(214 100% 92%);
+		color: color('primary', '900');
+		border-color: color('primary', '300');
+	}
+}
