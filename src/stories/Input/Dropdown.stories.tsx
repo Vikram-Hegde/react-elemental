@@ -46,6 +46,13 @@ Default.args = {
 	placeholder: 'Select an option',
 }
 
+export const Secondary = Template.bind({})
+Secondary.args = {
+	options,
+	placeholder: 'Select an option',
+	variant: 'secondary',
+}
+
 export const WithDefaultValue = Template.bind({})
 WithDefaultValue.args = {
 	options,
@@ -60,4 +67,11 @@ WithCustomStyles.args = {
 	className: 'custom-dropdown',
 	dropdownClassName: 'custom-dropdown-content',
 	optionClassName: 'custom-dropdown-item',
+}
+
+export const FullWidth = Template.bind({})
+FullWidth.args = {
+	options,
+	placeholder: 'Select an option',
+	fullWidth: true,
 }

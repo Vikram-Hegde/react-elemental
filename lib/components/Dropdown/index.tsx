@@ -16,6 +16,8 @@ interface DropdownProps {
 	dropdownClassName?: string
 	optionClassName?: string
 	dropdownBtnClassName?: string
+	fullWidth?: boolean
+	variant?: 'primary' | 'secondary'
 }
 
 const Dropdown = ({
@@ -27,6 +29,8 @@ const Dropdown = ({
 	dropdownClassName,
 	optionClassName,
 	dropdownBtnClassName,
+	fullWidth,
+	variant = 'primary',
 	...props
 }: DropdownProps) => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -59,7 +63,12 @@ const Dropdown = ({
 
 	return (
 		<div
-			className={clsx(styles.dropdown, className)}
+			className={clsx(
+				styles.dropdown,
+				fullWidth && styles['dropdown--full'],
+				styles[`dropdown--${variant}`],
+				className
+			)}
 			ref={dropdownRef}
 			{...props}
 		>
@@ -67,7 +76,11 @@ const Dropdown = ({
 				className={clsx(styles['dropdown-btn'], dropdownBtnClassName)}
 				onClick={toggleDropdown}
 			>
-				{value ? value.label : placeholder}
+				{value ? (
+					value.label
+				) : (
+					<span className={styles['dropdown__placeholder']}>{placeholder}</span>
+				)}
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1em"

@@ -36,8 +36,8 @@ export default defineConfig({
 			entry: resolve(__dirname, 'lib/index.ts'),
 			formats: ['es'],
 		},
-		// watch: {
-		// 	clearScreen: true,
-		// },
+		watch: {
+			clearScreen: true,
+		},
 	},
 })
