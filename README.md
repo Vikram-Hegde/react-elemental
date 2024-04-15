@@ -29,8 +29,9 @@ import { Button } from '@vikramhegde/react-elemental'
 const MyComponent = () => (
 	<div>
 		<Button text="Click me" onClick={() => alert('Button clicked!')} />
-		<Spacing size="large" />
-		<Button text="Disabled" disabled />
+		<Badge count={5} maxCount={20}>
+			<YourComponent />
+		</Badge>
 	</div>
 )
 
@@ -42,4 +43,5 @@ export default MyComponent
 - `Button`
 - `Badge`
 - `Input`
+- `Dropdown`
 - more to come soon!
