@@ -37,9 +37,9 @@
 
 .dropdown-content {
 	position: absolute;
-	background-color: color('light', '400');
+	background-color: color('light', '50');
 	min-width: 160px;
-	box-shadow: shadow('200');
+	@include shadow('300');
 	z-index: 999;
 	border-radius: 6px;
 	top: calc(100% + 2px);
@@ -57,6 +57,6 @@
 	cursor: pointer;
 
 	&:hover {
-		background-color: color('light', '500');
+		background-color: color('light', '200');
 	}
 }

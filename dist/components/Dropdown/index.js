@@ -1,54 +1,64 @@
 import '../../assets/index2.css';
-import { jsxs as i, jsx as e } from "react/jsx-runtime";
-import n from "clsx";
-import { useState as g, useRef as x, useEffect as b } from "react";
-const C = "_dropdown_qw5l9_1", t = {
-  dropdown: C,
-  "dropdown-btn": "_dropdown-btn_qw5l9_6",
-  "dropdown-content": "_dropdown-content_qw5l9_15",
-  "dropdown-item": "_dropdown-item_qw5l9_23"
-}, j = ({
-  options: w,
-  placeholder: p,
-  value: s,
-  onChange: a,
-  className: m,
-  dropdownClassName: u,
-  optionClassName: f,
-  dropdownBtnClassName: h,
-  ..._
+import { jsxs as c, jsx as d } from "react/jsx-runtime";
+import e from "clsx";
+import { useState as b, useRef as C, useEffect as N } from "react";
+const y = "_dropdown_1pv64_1", O = "_dropdown__placeholder_1pv64_9", n = {
+  dropdown: y,
+  "dropdown--full": "_dropdown--full_1pv64_6",
+  dropdown__placeholder: O,
+  "dropdown-btn": "_dropdown-btn_1pv64_13",
+  "dropdown--secondary": "_dropdown--secondary_1pv64_25",
+  "dropdown-content": "_dropdown-content_1pv64_31",
+  "dropdown-item": "_dropdown-item_1pv64_44"
+}, L = ({
+  options: i,
+  placeholder: a,
+  value: l,
+  onChange: w,
+  className: _,
+  dropdownClassName: m,
+  optionClassName: h,
+  dropdownBtnClassName: u,
+  fullWidth: f,
+  variant: v = "primary",
+  ...k
 }) => {
-  const [l, d] = g(!1), r = x(null), k = (o) => {
-    a(o), d(!1);
-  }, v = () => {
-    d(!l);
-  }, c = (o) => {
-    r.current && !r.current.contains(o.target) && d(!1);
+  const [s, r] = b(!1), t = C(null), g = (o) => {
+    w(o), r(!1);
+  }, x = () => {
+    r(!s);
+  }, p = (o) => {
+    t.current && !t.current.contains(o.target) && r(!1);
   };
-  return b(() => (document.addEventListener("click", c), () => {
-    document.removeEventListener("click", c);
-  }), []), /* @__PURE__ */ i(
+  return N(() => (document.addEventListener("click", p), () => {
+    document.removeEventListener("click", p);
+  }), []), /* @__PURE__ */ c(
     "div",
     {
-      className: n(t.dropdown, m),
-      ref: r,
-      ..._,
+      className: e(
+        n.dropdown,
+        f && n["dropdown--full"],
+        n[`dropdown--${v}`],
+        _
+      ),
+      ref: t,
+      ...k,
       children: [
-        /* @__PURE__ */ i(
+        /* @__PURE__ */ c(
           "div",
           {
-            className: n(t["dropdown-btn"], h),
-            onClick: v,
+            className: e(n["dropdown-btn"], u),
+            onClick: x,
             children: [
-              s ? s.label : p,
-              /* @__PURE__ */ e(
+              l ? l.label : /* @__PURE__ */ d("span", { className: n.dropdown__placeholder, children: a }),
+              /* @__PURE__ */ d(
                 "svg",
                 {
                   xmlns: "http://www.w3.org/2000/svg",
                   width: "1em",
                   height: "1em",
                   viewBox: "0 0 24 24",
-                  children: /* @__PURE__ */ e(
+                  children: /* @__PURE__ */ d(
                     "path",
                     {
                       fill: "none",
@@ -64,11 +74,11 @@ const C = "_dropdown_qw5l9_1", t = {
             ]
           }
         ),
-        l && /* @__PURE__ */ e("div", { className: n(t["dropdown-content"], u), children: w.map((o) => /* @__PURE__ */ e(
+        s && /* @__PURE__ */ d("div", { className: e(n["dropdown-content"], m), children: i.map((o) => /* @__PURE__ */ d(
           "div",
           {
-            className: n(t["dropdown-item"], f),
-            onClick: () => k(o),
+            className: e(n["dropdown-item"], h),
+            onClick: () => g(o),
             children: o.label
           },
           o.value
@@ -78,5 +88,5 @@ const C = "_dropdown_qw5l9_1", t = {
   );
 };
 export {
-  j as default
+  L as default
 };

@@ -11,6 +11,8 @@ interface DropdownProps {
     dropdownClassName?: string;
     optionClassName?: string;
     dropdownBtnClassName?: string;
+    fullWidth?: boolean;
+    variant?: 'primary' | 'secondary';
 }
-declare const Dropdown: ({ options, placeholder, value, onChange, className, dropdownClassName, optionClassName, dropdownBtnClassName, ...props }: DropdownProps) => import("react/jsx-runtime").JSX.Element;
+declare const Dropdown: ({ options, placeholder, value, onChange, className, dropdownClassName, optionClassName, dropdownBtnClassName, fullWidth, variant, ...props }: DropdownProps) => import("react/jsx-runtime").JSX.Element;
 export default Dropdown;
