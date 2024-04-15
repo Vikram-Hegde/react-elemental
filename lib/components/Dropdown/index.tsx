@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 import { useEffect, useRef, useState } from 'react'
 import styles from './Dropdown.module.scss'
-import ChevronDown from '~icons/solar/alt-arrow-down-linear'
 
 interface DropdownOption {
 	value: string
@@ -69,7 +68,21 @@ const Dropdown = ({
 				onClick={toggleDropdown}
 			>
 				{value ? value.label : placeholder}
-				<ChevronDown />
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					viewBox="0 0 24 24"
+				>
+					<path
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						d="m19 9l-7 6l-7-6"
+					></path>
+				</svg>
 			</div>
 			{isOpen && (
 				<div className={clsx(styles['dropdown-content'], dropdownClassName)}>
