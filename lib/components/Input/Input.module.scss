@@ -46,4 +46,9 @@
 			color: color('light', '900');
 		}
 	}
+
+	&--disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 }

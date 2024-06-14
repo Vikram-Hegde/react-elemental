@@ -35,3 +35,9 @@ WithEndIcon.args = {
 	endIcon: <SearchIcon />,
 	placeholder: 'Type something...',
 }
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+	placeholder: 'Type something...',
+	disabled: true,
+}

@@ -2,9 +2,21 @@ import clsx from 'clsx'
 import styles from './Chip.module.scss'
 
 interface ChipProps extends React.HTMLAttributes<HTMLSpanElement> {
+	/**
+	 * Accent color of the chip
+	 */
 	accent: 'green' | 'orange' | 'red' | 'blue'
+	/**
+	 * Icon to display beside the text
+	 */
 	icon?: React.ReactNode
+	/**
+	 * Position of the icon
+	 */
 	iconPosition?: 'start' | 'end'
+	/**
+	 * If true, the text will be in uppercase
+	 */
 	uppercase?: boolean
 }
 

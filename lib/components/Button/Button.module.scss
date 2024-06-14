@@ -46,7 +46,7 @@
 	}
 
 	&--sm {
-		padding: spacing('200') spacing('200');
+		padding: spacing('200');
 	}
 
 	&--md {
@@ -72,7 +72,7 @@
 
 	&--disabled {
 		opacity: 0.5;
-		pointer-events: none;
+		cursor: not-allowed;
 	}
 
 	&--uppercase {

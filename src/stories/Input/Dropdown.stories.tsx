@@ -75,3 +75,10 @@ FullWidth.args = {
 	placeholder: 'Select an option',
 	fullWidth: true,
 }
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+	options,
+	placeholder: 'Select an option',
+	disabled: true,
+}

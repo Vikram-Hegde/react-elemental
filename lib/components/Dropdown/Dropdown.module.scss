@@ -33,6 +33,11 @@
 		color: color('primary', '900');
 		border: 2px solid color('light', '500');
 	}
+
+	&--disabled {
+		pointer-events: none;
+		opacity: 0.5;
+	}
 }
 
 .dropdown-content {

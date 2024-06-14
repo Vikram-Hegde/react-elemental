@@ -5,11 +5,26 @@ import { HTMLAttributes } from 'react'
 type BadgeVariant = 'primary' | 'secondary' | 'success' | 'danger'
 
 interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
+	/**
+	 * The variant of the badge
+	 */
 	variant?: BadgeVariant
+	/**
+	 * The count which will be displayed in the badge
+	 */
 	count?: number
 	children: React.ReactNode
+	/**
+	 * The maximum count which will be displayed in the badge
+	 */
 	maxCount?: number
+	/**
+	 * The anchor/position of the badge
+	 */
 	anchor: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
+	/**
+	 * The offset of the badge for finer control
+	 */
 	anchorOffset?: {
 		top?: string
 		right?: string

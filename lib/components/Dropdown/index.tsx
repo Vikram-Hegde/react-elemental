@@ -9,16 +9,49 @@ interface DropdownOption {
 }
 
 interface DropdownProps {
+	/**
+	 * The options for the dropdown
+	 */
 	options: DropdownOption[]
+	/**
+	 * The placeholder for the dropdown
+	 */
 	placeholder: string
+	/**
+	 * The value of the selected option
+	 */
 	value?: DropdownOption | null
+	/**
+	 * onChange is triggered when option is changed
+	 * @param option The selected option
+	 * @returns void
+	 */
 	onChange: (option: DropdownOption) => void
 	className?: string
+	/**
+	 * Custom styles for dropdown wrapper
+	 */
 	dropdownClassName?: string
+	/**
+	 * Custom styles for dropdown options
+	 */
 	optionClassName?: string
+	/**
+	 * Custom styles for dropdown button
+	 */
 	dropdownBtnClassName?: string
+	/**
+	 * Whether the dropdown should be full width
+	 */
 	fullWidth?: boolean
+	/**
+	 * The variant of the dropdown which can be primary or secondary
+	 */
 	variant?: 'primary' | 'secondary'
+	/**
+	 * Whether the dropdown is disabled
+	 */
+	disabled?: boolean
 }
 
 const Dropdown = ({
@@ -32,6 +65,7 @@ const Dropdown = ({
 	dropdownBtnClassName,
 	fullWidth,
 	variant = 'primary',
+	disabled = false,
 	...props
 }: DropdownProps) => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -73,31 +107,6 @@ const Dropdown = ({
 			ref={dropdownRef}
 			{...props}
 		>
-			{/* <div
-				className={clsx(styles['dropdown-btn'], dropdownBtnClassName)}
-				onClick={toggleDropdown}
-			>
-				{value ? (
-					value.label
-				) : (
-					<span className={styles['dropdown__placeholder']}>{placeholder}</span>
-				)}
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="1em"
-					height="1em"
-					viewBox="0 0 24 24"
-				>
-					<path
-						fill="none"
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="1.5"
-						d="m19 9l-7 6l-7-6"
-					></path>
-				</svg>
-			</div> */}
 			<Button
 				endIcon={
 					<svg
@@ -118,9 +127,12 @@ const Dropdown = ({
 				}
 				variant="secondary"
 				borderAccent="secondary"
-				className={clsx(styles['dropdown-btn'], dropdownBtnClassName)}
+				className={clsx(styles['dropdown-btn'], dropdownBtnClassName, {
+					[styles['dropdown-btn--disabled']]: disabled,
+				})}
 				onClick={toggleDropdown}
 				fullWidth={fullWidth}
+				disabled={disabled}
 			>
 				{value ? (
 					value.label
